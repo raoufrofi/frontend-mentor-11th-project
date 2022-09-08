@@ -1,0 +1,40 @@
+@use "globals" as g;
+@use "util" as u;
+@use "top";
+@use "mid";
+@use "bottom";
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: g.$light-gray;
+  font-family: g.$karla;
+}
+
+main {
+  width: min(300px, 90%);
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include u.breakpoint(tab) {
+    width: min(1280px, 50%);
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.down {
+  @include u.breakpoint(tab) {
+    display: flex;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}

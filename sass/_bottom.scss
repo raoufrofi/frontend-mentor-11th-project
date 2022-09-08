@@ -1,0 +1,20 @@
+@use "globals" as g;
+@use "util" as u;
+
+.bottom {
+  background-color: g.$cyan;
+  color: #fff;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 1em;
+  }
+
+  li {
+    color: g.$light-gray;
+    opacity: 0.7;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
